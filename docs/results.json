@@ -1,0 +1,95 @@
+{
+  "profiles": [
+    {
+      "kind": "pbkdf2-sha256",
+      "iterations": 100000,
+      "memory_kib": 0,
+      "parallelism": 1,
+      "label": "pbkdf2-sha256 100,000",
+      "seconds": 0.038711,
+      "repeats": 3,
+      "batch": 2,
+      "per_derivation_ms": 38.711,
+      "per_second": 25.8
+    },
+    {
+      "kind": "pbkdf2-sha256",
+      "iterations": 600000,
+      "memory_kib": 0,
+      "parallelism": 1,
+      "label": "pbkdf2-sha256 600,000",
+      "seconds": 0.226686,
+      "repeats": 3,
+      "batch": 2,
+      "per_derivation_ms": 226.686,
+      "per_second": 4.4
+    },
+    {
+      "kind": "pbkdf2-sha256",
+      "iterations": 1300000,
+      "memory_kib": 0,
+      "parallelism": 1,
+      "label": "pbkdf2-sha256 1,300,000",
+      "seconds": 0.46527,
+      "repeats": 3,
+      "batch": 2,
+      "per_derivation_ms": 465.27,
+      "per_second": 2.1
+    },
+    {
+      "kind": "scrypt",
+      "iterations": 0,
+      "memory_kib": 16384,
+      "parallelism": 1,
+      "label": "scrypt n=2^14 r=8 p=1",
+      "seconds": 0.03889,
+      "repeats": 3,
+      "batch": 2,
+      "per_derivation_ms": 38.89,
+      "per_second": 25.7
+    },
+    {
+      "kind": "scrypt",
+      "iterations": 0,
+      "memory_kib": 32768,
+      "parallelism": 1,
+      "label": "scrypt n=2^15 r=8 p=1",
+      "seconds": 0.075402,
+      "repeats": 3,
+      "batch": 2,
+      "per_derivation_ms": 75.402,
+      "per_second": 13.3
+    }
+  ],
+  "calibrated_pbkdf2": {
+    "kind": "pbkdf2-sha256",
+    "iterations": 772678,
+    "memory_kib": 0,
+    "parallelism": 1,
+    "label": "pbkdf2-sha256 772,678",
+    "seconds": 0.265719,
+    "repeats": 2,
+    "batch": 1,
+    "per_derivation_ms": 265.719,
+    "per_second": 3.8
+  },
+  "calibrated_scrypt": {
+    "kind": "scrypt",
+    "iterations": 0,
+    "memory_kib": 131072,
+    "parallelism": 1,
+    "label": "scrypt n=2^17 r=8 p=1",
+    "seconds": 0.326203,
+    "repeats": 2,
+    "batch": 1,
+    "per_derivation_ms": 326.203,
+    "per_second": 3.1
+  },
+  "attacker_rates": {
+    "single core": 1.0,
+    "8-core CPU": 8.0,
+    "1 GPU": 3000.0,
+    "8 GPU rig": 24000.0,
+    "rented cluster": 250000.0
+  }
+}

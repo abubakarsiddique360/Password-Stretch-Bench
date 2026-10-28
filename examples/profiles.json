@@ -1,0 +1,11 @@
+{
+  "targets": ["single core", "1 GPU", "8 GPU rig"],
+  "entropy_bits": [30, 40, 50, 60, 70, 80],
+  "profiles": [
+    { "name": "pbkdf2-100k", "kind": "pbkdf2-sha256", "iterations": 100000 },
+    { "name": "pbkdf2-600k", "kind": "pbkdf2-sha256", "iterations": 600000 },
+    { "name": "pbkdf2-1.3M", "kind": "pbkdf2-sha256", "iterations": 1300000 },
+    { "name": "scrypt-2^14", "kind": "scrypt", "memory_kib": 16384, "parallelism": 1 },
+    { "name": "scrypt-2^15", "kind": "scrypt", "memory_kib": 32768, "parallelism": 1 }
+  ]
+}
